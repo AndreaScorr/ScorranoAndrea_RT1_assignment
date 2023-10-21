@@ -68,7 +68,7 @@ def find_golden_token():
 
 
 
-drive(20,15)
+drive(60,5)
 i=0
 while i<6:
     
@@ -80,7 +80,7 @@ while i<6:
         print("Found it!")
         if R.grab(): # if we grab the token, we move the robot forward and on the right, we release the token, and we go back to the initial position
             print("Gotcha!")
-            drive(-20,5)
+            drive(-50,2)
             
             R.release()
             drive(-4,2)
@@ -110,7 +110,7 @@ while i<6:
         
 
 i=0
-while 1:
+while i<6:
     
     dist, rot_y = find_golden_token()
     if dist==-1: # if no token is detected, we make the robot turn 
@@ -120,11 +120,11 @@ while 1:
         print("Found it!")
         if R.grab(): # if we grab the token, we move the robot forward and on the right, we release the token, and we go back to the initial position
             print("Gotcha!")
-            turn(-5,7)
-            drive(5,7)
+            turn(-21,2)
+            drive(21,3)
             R.release()
-            drive(-5,7)
-            turn(5,7)
+            drive(-21,3)
+            turn(21,2)
             i+=1
             '''
             turn(-5,2)
@@ -148,5 +148,7 @@ while 1:
         print("Right a bit...")
         turn(+2, 0.5)
 
+
+print("work done!")
     
    
