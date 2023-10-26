@@ -60,11 +60,12 @@ def find_golden_token():
         if token.dist < dist and token.info.marker_type is MARKER_TOKEN_GOLD:
             dist=token.dist
 	    rot_y=token.rot_y
+	    codeToken=token.info.code
 	    print(token.dist)
     if dist==100:
-	return -1, -1
+	return -1, -1,-1
     else:
-   	return dist, rot_y
+   	return dist, rot_y, codeToken
 
 
 
@@ -73,13 +74,14 @@ drive(60,5)
 
 #turn(-10,12)
 #print(R.see())
-
+#inizialize the list of token 
 tokens=[]
 
+#this for is used to turn around itself and see the available tokens
 for i in range(0,12):
 	print(R.see(),'\n')
 	turn(-10,1)
-	for token in R.see():
+	for token in R.see(): #R.see return a list of tokens, the for loop scroll throught the list to see take the code of token
 		if not token.info.code in tokens:
 			tokens.append(token.info.code)
 	
@@ -87,25 +89,29 @@ for i in range(0,12):
 print('tokens')
 print((tokens))
 
-'''
+tokenToApproach=list(tokens) #this is the list of tokens that mast be closer to the gray area
+tokenToAlignTogether=list(tokens) #this is the list of tokens that mast be aligned together
+#both are copy of the original list, in order to not modify the original one
 
-i=0
-while i<6:
+#this while is used to bring the golden box coser to the gray area
+while not len(tokenToApproach)==0: #stop the while when there are no tokens anymore 
     
-    dist, rot_y = find_golden_token()
+    dist, rot_y, codeToken = find_golden_token()
     if dist==-1: # if no token is detected, we make the robot turn 
 	print("I don't see any token!!")
-	turn(-10, 1)
+	turn(-10, 1) #turn a little bit on left
     elif dist <d_th: # if we are close to the token, we try grab it.
-        print("Found it!")
+        print("Found it!",codeToken)
         if R.grab(): # if we grab the token, we move the robot forward and on the right, we release the token, and we go back to the initial position
             print("Gotcha!")
-            drive(-50,2)
             
+            drive(-50,2)
             R.release()
             drive(-4,2)
             turn(-2,7)
-            i+=1
+            
+            tokenToApproach.remove(codeToken)
+            print('remaining tokens:',tokenToApproach)
         
 	    
 	else:
@@ -119,12 +125,13 @@ while i<6:
     elif rot_y > a_th:
         print("Right a bit...")
         turn(+2, 0.5)
+ 
         
 
 i=0
-while i<6:
+while not len(tokenToAlignTogether)==0:
     
-    dist, rot_y = find_golden_token()
+    dist, rot_y,codeToken = find_golden_token()
     if dist==-1: # if no token is detected, we make the robot turn 
 	print("I don't see any token!!")
 	turn(-10, 1)
@@ -138,6 +145,8 @@ while i<6:
             drive(-21,3)
             turn(21,2)
             i+=1
+            tokenToAlignTogether.remove(codeToken)
+            print('remaining tokens:',tokenToAlignTogether)
     
 	    
 	else:
@@ -155,4 +164,4 @@ while i<6:
 
 print("work done!")
     
-   '''
+  
