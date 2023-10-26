@@ -10,7 +10,7 @@ d_th = 0.4
 """ float: Threshold for the control of the orientation"""
 
 R = Robot()
-
+#R.location(300)
 def drive(speed, seconds):
     """
     Function for setting a linear velocity
@@ -55,6 +55,7 @@ def find_golden_token():
 	rot_y (float): angle between the robot and the golden token (-1 if no golden token is detected)
     """
     dist=100
+    print(len(R.see()))
     for token in R.see():
         if token.dist < dist and token.info.marker_type is MARKER_TOKEN_GOLD:
             dist=token.dist
@@ -69,6 +70,25 @@ def find_golden_token():
 
 
 drive(60,5)
+
+#turn(-10,12)
+#print(R.see())
+
+tokens=[]
+
+for i in range(0,12):
+	print(R.see(),'\n')
+	turn(-10,1)
+	for token in R.see():
+		if not token.info.code in tokens:
+			tokens.append(token.info.code)
+	
+
+print('tokens')
+print((tokens))
+
+'''
+
 i=0
 while i<6:
     
@@ -86,15 +106,7 @@ while i<6:
             drive(-4,2)
             turn(-2,7)
             i+=1
-            '''
-            turn(-5,2)
-	    cicle(65,2)
-	    R.release()
-	    turn(5,7)
-	    cicle(40,5)
-	    turn(5,2)
-	    cicle(75,2)
-	    '''
+        
 	    
 	else:
             print("Aww, I'm not close enough.")
@@ -126,15 +138,7 @@ while i<6:
             drive(-21,3)
             turn(21,2)
             i+=1
-            '''
-            turn(-5,2)
-	    cicle(65,2)
-	    R.release()
-	    turn(5,7)
-	    cicle(40,5)
-	    turn(5,2)
-	    cicle(75,2)
-	    '''
+    
 	    
 	else:
             print("Aww, I'm not close enough.")
@@ -151,4 +155,4 @@ while i<6:
 
 print("work done!")
     
-   
+   '''
