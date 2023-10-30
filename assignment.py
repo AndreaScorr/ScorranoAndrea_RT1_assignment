@@ -46,6 +46,8 @@ def cicle(speed,seconds):
     R.motors[0].m0.power = 0
     R.motors[0].m1.power = 0
 
+
+
 def find_golden_token():
     """
     Function to find the closest golden token
@@ -69,12 +71,18 @@ def find_golden_token():
    	return dist, rot_y, codeToken
 
 
+
+
 def init():
 	'''
 	init phase:
 	-the robot go in the center (more or less) 
 	-turn around itself and see the available tokens
 	-create a list of tokens that has around itself
+	
+	Returns:
+	tokenToApproach (list): list of tokens of boxes that must be moved near the gray area
+	tokenToAglinTogether (list): list of tokens of boxes that must be aligned together
 	'''
 	drive(60,5)
 
@@ -85,8 +93,8 @@ def init():
 		print(R.see(),'\n')
 		turn(-10,1)
 		for token in R.see(): #R.see return a list of tokens, the for loop scroll throught the list to see take the code of token
-			if not token.info.code in tokens:
-				tokens.append(token.info.code)	
+			if not token.info.code in tokens: #if the token is not already present in the list 
+				tokens.append(token.info.code)	#add the token
 
 	#print('tokens')
 	print((tokens))
@@ -182,6 +190,7 @@ def alignToghetherBoxes(tokenToAlignTogether):
 	    elif rot_y > a_th:
 		print("Right a bit...")
 		turn(+2, 0.5)
+
 
 
 tokenToApproach, tokenToAlignTogether=init()
