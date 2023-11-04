@@ -313,20 +313,19 @@ print("work done!")
 ```
 
 ### Init phase ###
-
-![alt text](https://github.com/AndreaScorr/ScorranoAndrea_RT1_assignment/edit/main/init.png?raw=true)
+![alt text](https://github.com/AndreaScorr/ScorranoAndrea_RT1_assignment/blob/main/init.png?raw=true)
 
 The robot is placed in the center
 
 ### Approaching phase ###
 
-![alt text](https://github.com/AndreaScorr/ScorranoAndrea_RT1_assignment/edit/main/nearBox.png?raw=true)
+![alt text](https://github.com/AndreaScorr/ScorranoAndrea_RT1_assignment/blob/main/nearBox.png?raw=true)
 
 The robot has putted the boxes near the gray area.
 
 
 ### Alignment phase ###
-![alt text](https://github.com/AndreaScorr/ScorranoAndrea_RT1_assignment/edit/main/alignedBox.png?raw=true)
+![alt text](https://github.com/AndreaScorr/ScorranoAndrea_RT1_assignment/blob/main/alignedBox.png?raw=true)
 
 The robot has aligned the boxes to the center of the area
 
