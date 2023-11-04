@@ -183,7 +183,7 @@ def alignToghetherBoxes(tokenToAlignTogether):
 		    print("Aww, I'm not close enough.")
 	    elif -a_th<= rot_y <= a_th: # if the robot is well aligned with the token, we go forward
 		print("Ah, that'll do.")
-		drive(20, 0.5)
+		drive(10, 0.5)
 	    elif rot_y < -a_th: # if the robot is not well aligned with the token, we move it on the left or on the right
 		print("Left a bit...")
 		turn(-2, 0.5)
