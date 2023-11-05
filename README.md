@@ -88,7 +88,7 @@ The program is created with 6 functions, so it's possible to have a clear code a
 * ```python
   def turn(speed, seconds):
   ```
-  Turn tje robot with `speed` for `seconds`.
+  Turn the robot with `speed` for `seconds`.
   
 * ```python
   def find_golden_token():
