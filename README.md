@@ -5,6 +5,7 @@ Andrea Scorrano
 id: 6463777
 
 Write a python node that controls the robot to put all the golden boxes together.
+The final project is located in the main branch of the repository.
 
 Installing and running
 ----------------------
