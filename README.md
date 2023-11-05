@@ -340,8 +340,8 @@ https://github.com/AndreaScorr/corsoGit/assets/40230364/3711bfbc-62d0-4054-b331-
 
 
 ## Possible improvements ##
-This robot has the objective to put together the boxes. To reach the goal, the robot put itself in the middle of the gray area, turn around itself to see the boxes that has to put togheter, put them near the gray area, and do a sort of a circle to put the boxes in the middle.
-Future developments could be an increase of the execution speed, and implements the software on a real robot. Maybe the method `R.see()` could be replaced by a camera and using computer vision algoritms to detect the gold boxes and the mehod `R.grab()` could be replaced by a real end effector, fit for purpose.
+This robot has the objective to put together the boxes. To reach the goal, the robot put itself in the middle of the gray area, turn around itself to see the boxes that has to put togheter, put them near the gray area, and do a sort of a circle to put the boxes in the middle. It is possible that after a large number of runs, the robot blocks during the alignment phase. A possible improvment is to fix this problem.
+Future developments could be an increase of the execution speed, and implements the software on a real robot. Maybe the method `R.see()` could be replaced by a camera and using computer vision algoritms to detect the gold boxes and the mehod `R.grab()` could be replaced by a real end effector, fit for purpose. 
 
 
 
