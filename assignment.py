@@ -165,7 +165,7 @@ def alignToghetherBoxes(tokenToAlignTogether):
 	    dist, rot_y,codeToken = find_golden_token()
 	    if dist==-1: # if no token is detected, we make the robot turn 
 		print("I don't see any token!!")
-		turn(-10, 1)#turn a little bit on left
+		turn(-10, 0.5)#turn a little bit on left
 	    elif dist <d_th: # if we are close to the token, we try grab it.
 		print("Found it!")
 		if R.grab(): # if we grab the token, we move the robot on the left, it goes straight, release the box and come back 
