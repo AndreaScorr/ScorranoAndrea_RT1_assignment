@@ -104,13 +104,13 @@ The program is created with 6 functions, so it's possible to have a clear code a
 * ```python
   def bringBoxNearTheGrayArea(tokenToApproach):
   ```
-  This function let the boxes to grab the boxes and put them near the gray area.
+  This function let the robot to grab the boxes and put them near the gray area.
 
   
 * ```python
   def alignToghetherBoxes(tokenToAlignTogether):
   ```
-  Once the `bringBoxNearTheGrayArea(tokenToApproach)` has placed the boxes near the gray area, this function aligns the robot together.
+  Once the `bringBoxNearTheGrayArea(tokenToApproach)` has placed the boxes near the gray area, this function aligns the boxes together.
 ## Pseudocode of functions ##
 
 ### drive(speed, seconds): ###
