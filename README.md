@@ -305,7 +305,8 @@ END PROCEDURE
 ## Flow Chart ##
 
 
-![FlowChart](https://github.com/AndreaScorr/ScorranoAndrea_RT1_assignment/assets/40230364/9d89a332-c498-4b47-88f7-a0aff3674b46)
+![FlowChart (1)](https://github.com/AndreaScorr/ScorranoAndrea_RT1_assignment/assets/40230364/0db96aca-f56d-4e0e-9cf9-a81630c8e3fa)
+
 
 
 
