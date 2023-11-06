@@ -302,6 +302,14 @@ END PROCEDURE
             TurnRightSlightly()
  END PROCEDURE
 ```
+## Flow Chart ##
+
+
+![FlowChart](https://github.com/AndreaScorr/ScorranoAndrea_RT1_assignment/assets/40230364/9d89a332-c498-4b47-88f7-a0aff3674b46)
+
+
+
+
 
 ## Results ##
 
