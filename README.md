@@ -93,7 +93,7 @@ The program is created with 6 functions, so it's possible to have a clear code a
 * ```python
   def find_golden_token():
   ```
-  Use the metod `R.see()`to get a list of all the markers the robot can see, scroll the list and return the distance, the angle and the code of the nearest token if exists, otherwise returns -1.
+  Use the method `R.see()`to get a list of all the markers the robot can see, scroll the list and return the distance, the angle and the code of the nearest token if exists, otherwise returns -1.
 
 * ```python
   def init():
