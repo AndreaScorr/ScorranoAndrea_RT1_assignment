@@ -164,7 +164,7 @@ END PROCEDURE
     */
 
     dist = 100
-    PRINT(LENGTH(R.see()))
+    
 
     FOR EACH token IN R.see() DO
         IF token.dist < dist AND token_marker_is_gold THEN
@@ -207,8 +207,7 @@ END PROCEDURE
                 # Add the token's code to the list
                 tokens.append(token.info.code)
 
-    # Print the list of collected tokens
-    Print(tokens)
+   
 
     # Create two copies of the list of tokens for different purposes
     tokenToApproach = CopyList(tokens)
